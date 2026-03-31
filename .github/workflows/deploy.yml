@@ -18,6 +18,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Install, build, and upload with Astro
         uses: withastro/action@v3
+        with:
+          package-manager: npm # Cette ligne corrige l'erreur
 
   deploy:
     needs: build
